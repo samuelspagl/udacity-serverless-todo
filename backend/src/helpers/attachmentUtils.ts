@@ -21,3 +21,8 @@ export function AttachmentUtils(todoId:string){
         Expires: urlExpiration
       })
 }
+
+export async function getAttachmentUrl(attachmentId: string): Promise<string> {
+  const attachmentUrl = `https://${bucketName}.s3.amazonaws.com/${attachmentId}`
+  return attachmentUrl
+}
